@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)https://cdpn.io/ahamidEng/fullpage/EremLG -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+<title>CodePen - Creative Hamburger Menu ?</title>
+<link rel="stylesheet" href="./normalize.min.css">
+<style>
+    .nav ul {
+  display: none;
+}
+
+.nav-tgl {
+  display: inline-block;
+  cursor: pointer;
+  position: fixed;
+  z-index: 100;
+  right: 30px;
+  top: 30px;
+  width: 70px;
+  height: 70px;
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+  background: #fff;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.24);
+  line-height: 0.6;
+  text-align: center;
+}
+.nav-tgl > span {
+  display: inline-block;
+  position: relative;
+  height: 2px;
+  width: 34px;
+  border-radius: 1px;
+  background: #293335;
+  vertical-align: middle;
+}
+.nav-tgl > span:before, .nav-tgl > span:after {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  height: 2px;
+  border-radius: 1px;
+  background: #293335;
+  transition: all 200ms;
+}
+.nav-tgl > span:before {
+  top: -11px;
+  left: 3px;
+  width: 28px;
+}
+.nav-tgl > span:after {
+  top: 11px;
+  left: 6px;
+  width: 22px;
+}
+.nav-tgl:focus {
+  outline: none;
+}
+.nav-tgl:hover > span:after, .nav-tgl:hover > span:before {
+  width: 34px;
+  left: 0;
+}
+
+.nav:before {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  transition: all 500ms ease-in-out;
+  clip-path: circle(30px at calc(100% - 65px) 65px);
+  visibility: hidden;
+}
+
+.menu.active .nav:before {
+  visibility: visible;
+  clip-path: circle(100%);
+}
+.menu.active .nav-tgl > span {
+  height: 0;
+}
+.menu.active .nav-tgl > span:after, .menu.active .nav-tgl > span:before {
+  top: 0px;
+  left: 0;
+  width: 34px;
+}
+.menu.active .nav-tgl > span:after {
+  transform: rotate(-45deg);
+}
+.menu.active .nav-tgl > span:before {
+  transform: rotate(45deg);
+}
+
+  </style>
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no">
+
+
+
+
+<div class="menu">
+<button class="nav-tgl" type="button" aria-label="toggle menu">
+<span aria-hidden="true"></span>
+</button>
+<nav class="nav">
+
+<ul>
+<li>element one</li>
+<li>element two</li>
+<li>element three</li>
+<li>element four</li>
+</ul>
+</nav>
+</div>
+<script src="./stopExecutionOnTimeout-de7e2ef6bfefd24b79a3f68b414b87b8db5b08439cac3f1012092b2290c719cd.js.download"></script>
+<script id="rendered-js">
+      const menu = document.querySelector('.menu');
+const btn = menu.querySelector('.nav-tgl');
+btn.addEventListener('click', evt => {
+  if (menu.className.indexOf('active') === -1) {
+    menu.classList.add('active');
+  } else {
+    menu.classList.remove('active');
+  }
+});
+      //# sourceURL=pen.js
+    </script>
+
+
+</body></html>
