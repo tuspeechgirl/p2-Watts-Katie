@@ -28,8 +28,19 @@ margin-left: -155px;
     background: #B494B2;
 
 }
+a.nav-item.nav-link.active{
+    padding-left: 5%;
+}
+a.nav-item.nav-link{
+  padding-right: 10% !important;
+  font-size: 1.2rem;
+  padding-left: 3%;
+}
 .nav-item{
   color: white !important;
+  font-size: 1rem;
+  padding:2%;
+
 }
 .social-net{
 
