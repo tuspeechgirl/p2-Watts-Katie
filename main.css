@@ -4,6 +4,8 @@
  #403131- dark
  */
 
+
+/*MAIN STYLE*/
 body{
   font-family: 'Open Sans', sans-serif;
   color: #a1a1a1;
@@ -18,6 +20,7 @@ margin-left: -155px;
   height:3000px;
 }
 
+/*NAVIGATION*/
 .navigation{
   background: #B494B2;
 }
@@ -28,13 +31,12 @@ margin-left: -155px;
     background: #B494B2;
 
 }
-a.nav-item.nav-link.active{
-    padding-left: 5%;
-}
+
+
 a.nav-item.nav-link{
-  padding-right: 10% !important;
-  font-size: 1.2rem;
-  padding-left: 3%;
+
+  font-size: 1rem;
+
 }
 .nav-item{
   color: white !important;
@@ -42,8 +44,8 @@ a.nav-item.nav-link{
   padding:2%;
 
 }
+/*SOCIAL MEDIA ICONS*/
 .social-net{
-
   font-size: 3rem;
   float:right;
 }
@@ -54,15 +56,14 @@ a.nav-item.nav-link{
   display: inline;
   text-decoration: none;
 }
-
+/*JUMBOTRON*/
 .logo-tron{
   background: url("img/logo-large.png") no-repeat;
   background-position: left;
 max-width: 380px;
   background-size: 100% 100%;
 }
-
-
+/*MAIN STYLES*/
 .who{
   width: 90%;
 }
@@ -108,14 +109,6 @@ margin: 0 auto;
 #more3 {
   display: none;
 }
-
-
-
-
-
-
-
-
 
 /*POPUP*/
 .newsletter{
@@ -202,8 +195,48 @@ height: 14px;
 }
 /*END POP*/
 
+#accordian{
 
+	width:95%;
+	margin:auto;
+	margin-top: 100px;
+}
+@media (min-width: 760px) {
+	#accordian{
+		width: 60%;
+	}
+}
+.accordian-headers {
+	height: 80px;
+	display: flex;
+	align-items: center;
+	background-color: #FAC4C4;
+	margin:10px auto;
+	color: #fff;
+	padding: 0 20px;
+	justify-content: space-between;
+	font-family: 'Mountains of Christmas', cursive;
+	font-size: 40px;
+}
+.toggle-indicator {
+	font-size: 40px;
+	color:#B494B2 ;
+	font-weight: bold;
+}
 
+.accordian-description {
+	height: 0;
+	background-color:#B494B2;
+	overflow: hidden;
+	transition: height 1s;
+	color:black;
+	font-size: 25px;
+  text-align: center;
+}
+.accordian-open{
+	height:100px;
+	padding: 5px 2px;
+}
 
 
 

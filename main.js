@@ -57,8 +57,54 @@ function myPush3() {
 
 
 // When the user clicks on <div>, open the popup
-function myFunction() {
+function myFunctionPop() {
   var popup = document.getElementById("myPopup");
   popup.classList.toggle("show");
 }
-window.addEventListener("click", myFunction);
+window.addEventListener("click", myFunctionPop);
+
+//Accordian//
+var accordianHeaders = document.querySelectorAll('#accordian .accordian-headers');
+var accordianDescriptions = document.querySelectorAll('#accordian .accordian-description');
+
+//drop-down//
+function expandAccordianDescription() {
+
+//handles toggle//
+  for (i = 0; i < accordianHeaders.length; i++) {
+    accordianHeaders[i].childNodes[3].innerHTML = '<i class="fas fa-heart"></i>';
+    accordianDescriptions[i].classList.remove('accordian-open');
+  }
+
+
+this.nextElementSibling.classList.toggle('accordian-open');
+this.childNodes[3].innerHTML = '<i class="fas fa-hand-holding-heart"></i>';
+}
+
+//Add event click//
+for (i=0; i < accordianHeaders.length; i++) {
+
+accordianHeaders[i].addEventListener('click', expandAccordianDescription);
+}
+
+
+
+//API CODE//
+var mainSection = document.getElementById('page-body');
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var apiResult = JSON.parse(this.responseText);
+console.log(apiResult);
+
+        //Code Dealing With The API Data Goes Here
+
+
+
+
+
+
+    }
+};
+xmlhttp.open('GET', 'https://makeup-api.herokuapp.com/api/v1/products.json', true);
+xmlhttp.send();
