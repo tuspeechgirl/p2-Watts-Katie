@@ -95,10 +95,16 @@ var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         var apiResult = JSON.parse(this.responseText);
-console.log(apiResult);
+
 
         //Code Dealing With The API Data Goes Here
-
+let api = apiResult[1].description;
+makeup = () => {
+var descriptionWrapper = document.getElementById('apiInfo');
+var textnode1 = document.createTextNode(api);
+descriptionWrapper.appendChild(textnode1);
+}
+window.addEventListener("load",makeup);
 
 
 
