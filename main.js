@@ -105,6 +105,12 @@ xmlhttp.onreadystatechange = function() {
         var text1= document.createTextNode(apiResult[1].product_link);
         addlink.appendChild(text1);
 
+        var sectionThree = document.getElementById('main'); //selects main//
+        var addDescript = document.createElement('p');
+        sectionThree.appendChild(addDescript);
+        var text1= document.createTextNode(apiResult[1].description);
+        addDescript.appendChild(text1);
+
 
 
 

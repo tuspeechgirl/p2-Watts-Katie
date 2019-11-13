@@ -249,10 +249,17 @@ height: 14px;
   font-size: 1rem;
   background: #B494B2;
     color:black;
-    padding: .5px 2px 20px 2px;
+    padding: .5px 20px 20px 2px;
     -webkit-box-shadow: 0 8px 6px -6px  #a1a1a1;
   	   -moz-box-shadow: 0 8px 6px -6px  #a1a1a1;
   	        box-shadow: 0 8px 6px -6px  #a1a1a1;
+}
+#what-line{
+  width:100% !important;
+  padding-left: 17px;
+}
+.today-tagline{
+  padding-left: 10px;
 }
 #header-one{
   background:  #FAC4C4;
