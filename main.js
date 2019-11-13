@@ -96,21 +96,19 @@ xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         var apiResult = JSON.parse(this.responseText);
 
-
         //Code Dealing With The API Data Goes Here
-let api = apiResult[1].description;
-makeup = () => {
-var descriptionWrapper = document.getElementById('apiInfo');
-var textnode1 = document.createTextNode(api);
-descriptionWrapper.appendChild(textnode1);
-}
-window.addEventListener("load",makeup);
 
+
+        var sectionTwo = document.getElementById('main'); //selects main//
+        var addlink = document.createElement('p');
+        sectionTwo.appendChild(addlink);
+        var text1= document.createTextNode(apiResult[1].product_link);
+        addlink.appendChild(text1);
 
 
 
 
     }
 };
-xmlhttp.open('GET', 'https://makeup-api.herokuapp.com/api/v1/products.json', true);
+xmlhttp.open('GET', 'http://makeup-api.herokuapp.com/api/v1/products.json', true);
 xmlhttp.send();
