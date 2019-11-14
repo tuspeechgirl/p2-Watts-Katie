@@ -258,6 +258,9 @@ height: 14px;
   width:100% !important;
   padding-left: 17px;
 }
+p{
+  margin-left: 5%;
+}
 .today-tagline{
   padding-left: 10px;
 }
